@@ -1,7 +1,7 @@
 class OpenpneUsersController < UsersController
 
   def show
-    @user = User.active.find_by_login(:username)
+    @user = User.find_by_login(params[:username])
 
     respond_to do |format|
       format.xml
